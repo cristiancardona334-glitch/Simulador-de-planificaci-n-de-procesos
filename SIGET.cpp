@@ -2,6 +2,7 @@
 #include <vector>     // Permite almacenar varios procesos en un vector
 #include <queue>      // Permite utilizar una cola para el algoritmo Round Robin
 #include <string>     // Permite utilizar datos de tipo texto
+#include <algorithm>  // Permite utilizar funciones como min()
 
 using namespace std;
 
@@ -105,6 +106,9 @@ void mostrarProcesos(vector<Proceso> procesos) {
 
              // Mostramos el tiempo total de CPU.
              << " | CPU: " << p.cpu
+
+             // Mostramos el estado actual.
+             << " | Estado: " << mostrarEstado(p.estado)
 
              << endl;
     }
